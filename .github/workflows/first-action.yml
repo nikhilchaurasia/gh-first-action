@@ -1,0 +1,14 @@
+name: first-gh-in-action
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print-greetings
+        run: echo "Say hi"
+      - name: print-by-in-multiline
+        run: | 
+          echo "say bye"
+          echo " bye in second line
+              
+    
