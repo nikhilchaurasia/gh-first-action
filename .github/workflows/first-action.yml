@@ -1,5 +1,5 @@
 name: first-gh-in-action
-on: workflow_dispatch
+on: push
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -10,5 +10,10 @@ jobs:
         run: | 
           echo "say bye"
           echo "bye in second line"
+  github-object:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print-github-object
+        run: echo "${{ toJSON(github) }}"
               
     
