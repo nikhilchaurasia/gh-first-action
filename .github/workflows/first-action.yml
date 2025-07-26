@@ -10,7 +10,15 @@ jobs:
         run: | 
           echo "say bye"
           echo "bye in second line"
+  install-node:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install-node-js
+        uses: actions/setup-node@v4
+        with: 
+          version: 18
   github-object:
+    needs: [first-job, install-node]
     runs-on: ubuntu-latest
     steps:
       - name: print-github-object
